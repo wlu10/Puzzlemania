@@ -1,0 +1,86 @@
+<html>
+<h1> Welcome to Word Scramble </h1>
+<script>
+var picsEasy = [["https://grandbaby-cakes.com/wp-content/uploads/2014/09/Fish-and-Chips-Recipe-1.jpg","https://previews.123rf.com/images/antartis/antartis1302/antartis130200044/18045807-beefeaters-london-october-18-a-royal-guard-at-buckingham-palace-parade-in-london-england-2012-the-gu.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVwfU6hRGbq26YIzG6chGH9bPNE2SBpKZohj3Sm3rw4XG-iIAyVA", "https://www.wired.com/images_blogs/gamelife/images/2008/01/07/queenelizabethii.jpg", "england"]]
+
+var word
+
+/*function run(guess, correctWord)
+{
+	
+}*/
+
+function restart()
+{
+	
+	document.getElementById("easy").style.display = "initial"
+	document.getElementById("medium").style.display = "initial"
+	document.getElementById("hard").style.display = "initial"
+	document.getElementById("wordDisplay").innerHTML = ""
+	document.getElementById("wordDisplay2").innerHTML = ""
+}
+
+function checkAnswer()
+{
+	var answer = prompt("Enter your answer")
+	var answer1 = answer.toLowerCase()
+	var correct = word[4]
+	if (answer1 == correct)
+	{
+		document.getElementById("wordDisplay2").innerHTML = "Good Job, you anwered correctly"
+		
+		
+	}
+	else
+	{		
+		document.getElementById("wordDisplay2").innerHTML = "You answered incorrectly, try again"
+	}
+}
+
+function easyWordScramble()
+{
+	var rand = Math.floor(Math.random() * picsEasy.length)
+	word = picsEasy[rand]
+	document.getElementById("Pic1").src = word[0]
+	document.getElementById("Pic2").src = word[1]
+	document.getElementById("Pic3").src = word[2]
+	document.getElementById("Pic4").src = word[3] 
+	document.getElementById("easy").style.display = "none"
+	document.getElementById("medium").style.display = "none"
+	document.getElementById("hard").style.display = "none"
+	document.getElementById("answerButton").style.display = "visible"
+	
+	
+	
+	
+}
+
+function mediumWordScramble()
+{
+	var rand = Math.round(Math.random() * wordScrambleMedium.length)
+}
+
+function hardWordScramble()
+{
+	var rand = Math.round(Math.random() * wordScrambleHard.length)
+}
+
+
+
+</script>
+<h2 id = "wordDisplay"> </h2>
+<h3 id = "wordDisplay2"> </h3>
+<h4 id = "wordDisplay3"> </h4>
+<h5 id = "wordDisplay4"> </h5>
+<img id = "Pic1"  style="width:640px;height:434px">
+<img id = "Pic2"  style="width:640px;height:434px">
+<img id = "Pic3"  style="width:640px;height:434px">
+<img id = "Pic4"  style="width:640px;height:434px">
+
+<input type="button" id = "easy" value="Easy" onclick="easyWordScramble();">
+<input type="button" id = "medium" value="Medium" onclick="mediumWordScramble();">
+<input type="button" id = "hard" value="Hard" onclick="hardWordScramble();">
+<input type="button" id = "answerButton" value="Click to answer" onclick="checkAnswer();">
+<input type="button" id = "restart" value="Click to play another" onclick="restart();">
+
+</html>
