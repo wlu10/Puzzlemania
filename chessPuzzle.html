@@ -1,0 +1,177 @@
+<html>
+<title> Mubasher's Chess Board </title>
+<head>
+<script>
+var wB = "&#9815;"
+var wR = "&#9814;"
+var wH = "&#9816;"
+var wQ = "&#9813;"
+var wK = "&#9812;"
+var wP = "&#9817;"
+
+var bB = "&#9821;"
+var bR = "&#9820;"
+var bH = "&#9822;"
+var bQ = "&#9819;"
+var bK = "&#9818;"
+var bP = "&#9823;"
+
+var game
+var gameAnswer
+var gameComp
+var easyPieceLocations = [['a8.' + wB, 'h8.' + bK, 'a7.' + bP, 'h7.' + bP, 'b6.' + bP, 'd6.' + wP, 'e6.' + wQ, 'c5.' + bP, 'e5.' + bB, 'h4.' + wP, 'b3.' + wP, 'g3.' + bQ, 'a2.' + wP, 'f1.' + wR, 'h1.' + wK ]]
+var easyAnswer = [['f1f8', 'f8g8']]
+var easyCompMove = [['h8g7']]
+var rand
+var moveNumber = 0
+var answer = ''
+function run()
+{
+	rand = Math.floor(Math.random() * easyPieceLocations.length)
+	game = easyPieceLocations[rand]
+	gameAnswer = easyAnswer[rand]
+	gameComp = easyCompMove[rand]
+	elementID = ""
+	piece = ""
+	temp = ""
+	for (i = 0; i < game.length; i++)
+	{
+		temp = game[i].split(".")
+		elementID = temp[0]
+		piece = temp[1]
+		document.getElementById(elementID).innerHTML = piece
+		
+		document.getElementById(elementID).fontSize = 9
+	}
+}
+
+function move()
+{
+	answer = prompt("Enter your move")
+	if (answer == gameAnswer[moveNumber])
+	{
+		doMove(gameAnswer[moveNumber])
+		if (moveNumber <= gameComp.length)
+		{
+			doCompMove(gameComp[moveNumber])
+		}
+		moveNumber = moveNumber + 1
+	}
+	else
+	{
+		moveNumber = moveNumber
+	}
+	document.getElementById('b1').innerHTML = 'sadFSAf'
+}
+
+function doMove(turn)
+{
+	move = turn
+	start = move.substring(0,2);
+	end = move.substring(2);
+	piece = document.getElementById(start).innerHTML;
+	document.getElementById(start).innerHTML = "";
+	document.getElementById(end).innerHTML = piece;
+	
+}
+
+function doCompMove(turn)
+{
+	move = turn
+	start = move.substring(0,2);
+	end = move.substring(2);
+	piece = document.getElementById(start).innerHTML;
+	document.getElementById(start).innerHTML = "";
+	document.getElementById(end).innerHTML = piece;
+	//document.getElementById('b1').innerHTML = 'ASDFASDFASDFADSFDSAFADSSAF'
+}
+
+</script>
+</head>
+<table>
+	<tr>
+		<td id="a8" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="b8" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="c8" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="d8" bgcolor="#999" width='52' height='52'> <font size=9> </font> </td>
+		<td id="e8" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="f8" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="g8" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="h8" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
+	</tr>
+	<tr>
+		<td id="a7" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="b7" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="c7" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="d7" bgcolor="#f9cda8" width='52' height='52'> <font size=9> </font> </td>
+		<td id="e7" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="f7" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="g7" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="h7" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
+	</tr>
+	<tr>
+		<td id="a6" bgcolor="#f9cda8" width='52' height='52'> </td>
+		<td id="b6" bgcolor="#999" width='52' height='52'> </td>
+		<td id="c6" bgcolor="#f9cda8" width='52' height='52'> </td>
+		<td id="d6" bgcolor="#999" width='52' height='52'> </td>
+		<td id="e6" bgcolor="#f9cda8" width='52' height='52'> </td>
+		<td id="f6" bgcolor="#999" width='52' height='52'> </td>
+		<td id="g6" bgcolor="#f9cda8" width='52' height='52'> </td>
+		<td id="h6" bgcolor="#999" width='52' height='52'> </td>
+	</tr>
+	<tr>
+		<td id="a5" bgcolor="#999" width='52' height='52'> </td>
+		<td id="b5" bgcolor="#f9cda8" width='52' height='52'> </td>
+		<td id="c5" bgcolor="#999" width='52' height='52'> </td>
+		<td id="d5" bgcolor="#f9cda8" width='52' height='52'> </td>
+		<td id="e5" bgcolor="#999" width='52' height='52'> </td>
+		<td id="f5" bgcolor="#f9cda8" width='52' height='52'> </td>
+		<td id="g5" bgcolor="#999" width='52' height='52'> </td>
+		<td id="h5" bgcolor="#f9cda8" width='52' height='52'> </td>
+	</tr>
+	<tr>
+		<td id="a4" bgcolor="#f9cda8" width='52' height='52'> </td>
+		<td id="b4" bgcolor="#999" width='52' height='52'> </td>
+		<td id="c4" bgcolor="#f9cda8" width='52' height='52'> </td>
+		<td id="d4" bgcolor="#999" width='52' height='52'> </td>
+		<td id="e4" bgcolor="#f9cda8" width='52' height='52'> </td>
+		<td id="f4" bgcolor="#999" width='52' height='52'> </td>
+		<td id="g4" bgcolor="#f9cda8" width='52' height='52'> </td>
+		<td id="h4" bgcolor="#999" width='52' height='52'> </td>
+	</tr>
+	<tr>
+		<td id="a3" bgcolor="#999" width='52' height='52'> </td>
+		<td id="b3" bgcolor="#f9cda8" width='52' height='52'> </td>
+		<td id="c3" bgcolor="#999" width='52' height='52'> </td>
+		<td id="d3" bgcolor="#f9cda8" width='52' height='52'> </td>
+		<td id="e3" bgcolor="#999" width='52' height='52'> </td>
+		<td id="f3" bgcolor="#f9cda8" width='52' height='52'> </td>
+		<td id="g3" bgcolor="#999" width='52' height='52'> </td>
+		<td id="h3" bgcolor="#f9cda8" width='52' height='52'> </td>
+	</tr>
+	<tr>
+		<td id="a2" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="b2" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="c2" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="d2" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="e2" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="f2" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="g2" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="h2" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
+	</tr>
+	<tr>
+		<td id="a1" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="b1" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="c1" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="d1" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="e1" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="f1" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="g1" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="h1" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
+	</tr>
+</table>
+<input type="button" value="Easy" onclick="run();">
+
+<input type="button" value="Move" onclick="move();">
+
+</html> 
