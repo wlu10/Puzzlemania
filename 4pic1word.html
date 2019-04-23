@@ -39,8 +39,8 @@ function checkAnswer()
 	var answer1 = answer.toLowerCase()
 	var correct = word[4]
 	
-	document.getElementById("wordDisplay2").innerHTML += correct
-	if (answer1 == correct)
+	document.getElementById("wordDisplay2").innerHTML = correct
+	/*if (answer1 == correct)
 	{
 		document.getElementById("wordDisplay2").innerHTML = "Good Job, you anwered correctly"
 		
@@ -49,7 +49,7 @@ function checkAnswer()
 	else
 	{		
 		document.getElementById("wordDisplay2").innerHTML = "You answered incorrectly, try again"
-	}
+	}*/
 }
 
 function easyWordScramble()
