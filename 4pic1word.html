@@ -78,7 +78,7 @@ function easyWordScramble()
 
 function mediumWordScramble()
 {
-	var rand = Math.round(Math.random() * wordScrambleMedium.length)word = picsEasy[rand]
+	var rand = Math.floor(Math.random() * picsMedium.length)
 	word = picsMedium[rand]
 	document.getElementById("Pic1").src = word[0]
 	document.getElementById("Pic2").src = word[1]
