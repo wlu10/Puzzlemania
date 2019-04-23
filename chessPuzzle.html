@@ -46,7 +46,7 @@ function run()
 
 function move()
 {
-	answer = prompt("Enter your move")
+	answer = document.getElementById("answer")
 	if (answer == gameAnswer[moveNumber])
 	{
 		doMove(gameAnswer[moveNumber])
@@ -171,6 +171,6 @@ function doCompMove(turn)
 <input type="button" value="Easy" onclick="run();">
 
 <input type="button" value="Move" onclick="move();">
-<textarea></textarea>
+<textarea id = "answer"></textarea>
 
 </html> 
