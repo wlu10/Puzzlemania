@@ -1,5 +1,5 @@
 <html>
-<title> Mubasher's Chess Board </title>
+<title> Chess Puzzle </title>
 <head>
 <script>
 var wB = "&#9815;"
@@ -24,7 +24,6 @@ var easyAnswer = [['f1f8', 'f8g8']]
 var easyCompMove = [['h8g7']]
 var rand
 var moveNumber = 0
-var answer = ''
 function run()
 {
 	rand = Math.floor(Math.random() * easyPieceLocations.length)
@@ -47,7 +46,7 @@ function run()
 
 function move()
 {
-	answer = prompt("Enter your move")
+	answer = prompt()
 	if (answer == gameAnswer[moveNumber])
 	{
 		doMove(gameAnswer[moveNumber])
@@ -172,5 +171,6 @@ function doCompMove(turn)
 <input type="button" value="Easy" onclick="run();">
 
 <input type="button" value="Move" onclick="move();">
+<textarea id = "answer"></textarea>
 
 </html> 
