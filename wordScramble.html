@@ -1,3 +1,94 @@
+<html>
+<script>
 var wordScrambleMedium = ["apple.lpepa", "space.capes", "flower.wflero", "spoon.ponos", "water.retaw", "juice.cuije", "squash.ashuqs", "angel.legan", "tinsel.sliten", "elves.leves"]
 var wordScrambleEasy = ["hour.uhor", "park.akrp", "part.atrp", "cake.acek", "love.evlo", "kick.cikk", "milk.lkmi", "rice.ierc", "bird.ibrd", "rose.seor"]
-["happily.lippahy", "birthday.dirthbay", "sparrow.arrpows", "potatoes.estopato", "invitation.tvniianoit", "wrapped.perpawd", "friend.dsiernf", "programming.mrnpagogimr", "circuit.ctruiic", "hardware.raaehwrd"]
+var wordScrambleHard = ["happily.lippahy", "birthday.dirthbay", "sparrow.arrpows", "potatoes.estopato", "invitation.tvniianoit", "wrapped.perpawd", "friend.dsiernf", "programming.mrnpagogimr", "circuit.ctruiic", "hardware.raaehwrd"]
+var word
+
+/*function run(guess, correctWord)
+{
+	
+}*/
+
+function restart()
+{
+	document.getElementById("easy").style.display = "initial"
+	document.getElementById("medium").style.display = "initial"
+	document.getElementById("hard").style.display = "initial"
+	document.getElementById("wordDisplay").innerHTML = ""
+	document.getElementById("wordDisplay2").innerHTML = ""
+}
+
+function checkAnswer()
+{
+	var answer = prompt("Enter your answer")
+	var answer1 = answer.toLowerCase()
+	var correct = word[0]
+	if (answer1 == correct)
+	{
+		document.getElementById("wordDisplay2").innerHTML = "Good Job, you anwered correctly"
+		
+		
+	}
+	else
+	{		
+		document.getElementById("wordDisplay2").innerHTML = "You answered incorrectly, try again"
+	}
+}
+
+function easyWordScramble()
+{
+	var rand = Math.floor(Math.random() * wordScrambleEasy.length)
+	word = wordScrambleEasy[rand].split(".")
+	document.getElementById("wordDisplay").innerHTML = "Unscramble the following word: " + 	word[1]
+	document.getElementById("easy").style.display = "none"
+	document.getElementById("medium").style.display = "none"
+	document.getElementById("hard").style.display = "none"
+	document.getElementById("answerButton").style.display = "visible"
+	
+	
+	
+	
+}
+
+function mediumWordScramble()
+{
+	var rand = Math.round(Math.random() * wordScrambleMedium.length)
+	word = wordScrambleMedium[rand].split(".")
+	document.getElementById("wordDisplay").innerHTML = "Unscramble the following word: " + 	word[1]
+	document.getElementById("easy").style.display = "none"
+	document.getElementById("medium").style.display = "none"
+	document.getElementById("hard").style.display = "none"
+	document.getElementById("answerButton").style.display = "visible"
+}
+
+function hardWordScramble()
+{
+	var rand = Math.round(Math.random() * wordScrambleHard.length)
+	word = wordScrambleHard[rand].split(".")
+	document.getElementById("wordDisplay").innerHTML = "Unscramble the following word: " + 	word[1]
+	document.getElementById("easy").style.display = "none"
+	document.getElementById("medium").style.display = "none"
+	document.getElementById("hard").style.display = "none"
+	document.getElementById("answerButton").style.display = "visible"
+}
+
+
+
+</script>
+<h2 id = "wordDisplay"> </h2>
+<h3 id = "wordDisplay2"> </h3>
+<h4 id = "wordDisplay3"> </h4>
+<h5 id = "wordDisplay4"> </h5>
+<div style="text-align: center;">
+<input type="button" id = "easy" value="Easy" onclick="easyWordScramble();">
+<input type="button" id = "medium" value="Medium" onclick="mediumWordScramble();">
+<input type="button" id = "hard" value="Hard" onclick="hardWordScramble();">
+<input type="button" id = "answerButton" value="Click to answer" onclick="checkAnswer();">
+<input type="button" id = "restart" value="Click to play another" onclick="restart();">
+<form action="https://wlu10.github.io/Puzzlemania">
+    <input type="submit" value="Return to Home" />
+</form>
+</div>
+</html>
+
