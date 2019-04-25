@@ -59,6 +59,7 @@ function moveTurn()
     if (moveNumber == gameAnswer.length)
     {
         document.getElementById("correct").innerHTML = "Congrats, you won"
+        document.getElementById("move").style.display = "none"
     }
 }
 
