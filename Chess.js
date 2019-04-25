@@ -54,7 +54,11 @@ function moveTurn()
     }
     else
     {
-        moveNumber = moveNumber
+        document.getElementById("correct").innerHTML = "Incorrect Move, try again"
+    }
+    if (moveNumber == gameAnswer.length)
+    {
+        document.getElementById("correct").innerHTML = "Congrats, you won"
     }
 }
 
