@@ -46,7 +46,7 @@ function moveTurn()
     if (answer == gameAnswer[moveNumber])
     {
         doMove(gameAnswer[moveNumber])
-        if (moveNumber <= gameComp.length)
+        if (moveNumber < gameComp.length)
         {
             doCompMove(gameComp[moveNumber])
         }
