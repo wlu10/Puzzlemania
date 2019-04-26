@@ -1,9 +1,3 @@
-<html>
-<title> 4-Pictures-1-Word </title>
-<div style="text-align: center;"><h1> Welcome to 4-Pics-1-Word </h1></div>
-<head>
-	<script src="4pic1word.js"></script>
-<!-- <script>
 var picsEasy = [["https://grandbaby-cakes.com/wp-content/uploads/2014/09/Fish-and-Chips-Recipe-1.jpg","https://previews.123rf.com/images/antartis/antartis1302/antartis130200044/18045807-beefeaters-london-october-18-a-royal-guard-at-buckingham-palace-parade-in-london-england-2012-the-gu.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVwfU6hRGbq26YIzG6chGH9bPNE2SBpKZohj3Sm3rw4XG-iIAyVA", "https://www.wired.com/images_blogs/gamelife/images/2008/01/07/queenelizabethii.jpg", "England"],
 	["https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/1_times_square_night_2013.jpg/300px-1_times_square_night_2013.jpg","https://daily.jstor.org/wp-content/uploads/2017/12/traffic_jam_1050x700.jpg","https://static.reservedirect.com/media/product/gallery/539/Early_Access_Statue_of_Liberty_Tour_with_Ellis_Island_(22436).jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Brooklyn_Bridge_Postdlf.jpg/330px-Brooklyn_Bridge_Postdlf.jpg","New York City"],
 	["https://upload.wikimedia.org/wikipedia/commons/8/8b/Moose_superior.jpg","https://i5.walmartimages.com/asr/1313c809-deef-4320-bae7-b974ad6a3e6a_2.930e3b520f82a5eb8a628d073bf2c203.jpeg?odnHeight=60&odnWidth=75&odnBg=FFFFFF","https://www.sierraclub.org/sites/www.sierraclub.org/files/styles/flexslider_full/public/sierra/articles/big/SIERRA%20Forests%20WB.jpeg?itok=Qk9Pndtv","https://www.gannett-cdn.com/-mm-/2425a0470766b558967df12696ca47cade450c8d/c=149-99-2888-1647/local/-/media/2018/01/20/INGroup/Indianapolis/636520357268068995--us-images-Tim-Hortons-Exterior-2.jpg?width=3200&height=1680&fit=crop","Canada"],
@@ -34,7 +28,7 @@ var picsHard = [["http://2.bp.blogspot.com/-9hhkQf2zocA/Utg0vj3tsjI/AAAAAAAAIfE/
 	["https://mir-s3-cdn-cf.behance.net/project_modules/fs/cc072f29506675.560441645d619.jpg","http://u-krane.com/attachments/Image/Blank_map_of_Polish_Lithuanian_Commonwealth1.png?template=generic","https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nikolaus_Kopernikus.jpg/220px-Nikolaus_Kopernikus.jpg","https://i.ytimg.com/vi/MzbyDHpRAqI/maxresdefault.jpg","Poland"],
 	["http://sacred-valley-salt.com/wp-content/uploads/2016/10/Khewra-Mosque.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Markhor_Schraubenziege_Capra_falconeri_Zoo_Augsburg-02.jpg/220px-Markhor_Schraubenziege_Capra_falconeri_Zoo_Augsburg-02.jpg","https://i.forbesimg.com/media/lists/people/malala-yousafzai_416x416.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Jinnah1945c.jpg/220px-Jinnah1945c.jpg","Pakistan"],
 	["https://marketingland.com/wp-content/ml-loads/2014/08/amazon-circles-1920.png","https://foundtheworld.com/wp-content/uploads/2015/12/Amazon-Rainforest-1.jpg","https://s.yimg.com/ny/api/res/1.2/48WKFABk3fRvqWHucN40Zw--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/", "http://media.zenfs.com/en-US/homerun/motleyfool.com/01aced0edf449146ec4bbd66bdb1b799http://www.ancientpages.com/wp-content/uploads/2017/08/amazonwarriorsfeatured.jpg", "Amazon"],
-	["https://cdn-s3.si.com/s3fs-public/styles/marquee_large_2x/public/2018/02/04/zach-ertz-super-bowl-touchdown-catch.png?itok=CVZsogQb","http://www.printable-alphabets.com/wp-content/uploads/2012/10/number-solid-6.jpg","http://static.nfl.com/static/content/public/pg-photo/2018/03/06/0ap3000000919883/ed-hochuli_pg_600.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Patriots-Browns_2007.jpg/350px-Patriots-Browns_2007.jpg","Touch Down"],
+	["https://cdn-s3.si.com/s3fs-public/styles/marquee_large_2x/public/2018/02/04/zach-ertz-super-bowl-touchdown-catch.png?itok=CVZsogQb","http://www.printable-alphabets.com/wp-content/uploads/2012/10/number-solid-6.jpg","http://static.nfl.com/static/content/public/pg-photo/2018/03/06/0ap3000000919883/ed-hochuli_pg_600.jpg","https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Patriots-Browns_2007.jpg/350px-Patriots-Browns_2007.jpg","Touchdown"],
 	["https://images-na.ssl-images-amazon.com/images/I/81biK28tbiL._SX425_.jpg","https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80","https://desight.pro/upload/img/linerix-free/21-577ac11c4668d-big.png","https://media.timeout.com/images/101899943/image.jpg","bar"],
 	["https://upload.wikimedia.org/wikipedia/commons/b/bf/Inveraray_Castle_-_south-west_facade.jpg","https://customwagonwheels.com/wp-content/uploads/2014/06/Cannon-Wheels-light-hub.jpg","https://media.gettyimages.com/photos/seige-of-paris-by-the-normans19th-century-colour-lithograph-private-picture-id463906529","https://c8.alamy.com/comp/BPA49T/seige-scene-the-alamo-1960-BPA49T.jpg","seige"],
 	["https://lh3.googleusercontent.com/yAtZnNL-9Eb5VYSsCaOC7KAsOVIJcY8mpKa0MoF-0HCL6b0OrFcBizURHywpuip-D6Y","https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Hexahedron.jpg/280px-Hexahedron.jpg","https://www.cimt.org.uk/projects/mepres/book7/bk7i22/s2eg2.gif","https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Square_-_black_simple.svg/1200px-Square_-_black_simple.svg.png","cube"],
@@ -115,29 +109,3 @@ function hardWordScramble()
 	document.getElementById("hard").style.display = "none"
 	document.getElementById("answerButton").style.display = "visible"
 }
-
-
-
-</script> -->
-<div style="text-align: center;">
-<h2 id = "wordDisplay"> </h2>
-<h3 id = "wordDisplay2"> </h3>
-<h4 id = "wordDisplay3"> </h4>
-<h5 id = "wordDisplay4"> </h5>
-<img id = "Pic1"  style="width:700px;height:325px">
-<img id = "Pic2"  style="width:700px;height:325px">
-<img id = "Pic3"  style="width:700px;height:325px">
-<img id = "Pic4"  style="width:700px;height:325px">
-</div>
-
-<div style="text-align: center;">
-<input type="button" id = "easy" value="Easy" onclick="easyWordScramble();">
-<input type="button" id = "medium" value="Medium" onclick="mediumWordScramble();">
-<input type="button" id = "hard" value="Hard" onclick="hardWordScramble();">
-<input type="button" id = "answerButton" value="Click to answer" onclick="checkAnswer();">
-<input type="button" id = "restart" value="Click to play another" onclick="restart();">
-<form action="https://wlu10.github.io/Puzzlemania">
-    <input type="submit" value="Return to Home" />
-</form>
-</div>	
-</html>
