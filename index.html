@@ -1,4 +1,43 @@
 <html>
+<head>
+    <style>
+        .button 
+        {
+            background-color: skyblue;
+            border-style: outset;
+            border-color: blueviolet;
+            color: purple;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .button1
+            {
+                background-color: beige;
+                position: absolute;
+                top: 550px;
+                left: 430px;
+            }
+        .button2
+            {
+                background-color: indianred;
+                position: absolute;
+                top: 550px;
+                left: 840px;
+            }
+        .button3
+            {
+                background-color: cyan;
+                position: absolute;
+                top: 550px;
+                left: 1250px;
+            }
+    </style>
+</head>
 <title>Puzzlemania</title>
 <center>
 <h1><font size = 50>Welcome to Puzzlemania </font></h1>
@@ -27,19 +66,7 @@
 </tr>
 </table>
 </center>
-<center>
-<table>
-<tr>
-<td width = 400>
-<input type="button" Value = "Word Scramble" onclick="window.location.href = 'https://wlu10.github.io/Puzzlemania/wordScramble';">
-</td>
-<td width = 400>
-<input type="button" Value = "Chess Puzzle" onclick="window.location.href = 'https://wlu10.github.io/Puzzlemania/chessPuzzle';">
-</td>
-<td width = 400>
-<input type="button" Value = "4-Pics-1-Word" onclick="window.location.href = 'https://wlu10.github.io/Puzzlemania/4pic1word';">
-</td>
-</tr>
-</table>
-</center>
+<input type="button" class = "button button1" Value = "Word Scramble" onclick="window.location.href = 'https://wlu10.github.io/Puzzlemania/wordScramble';"> 
+<input type="button" class = "button button2" Value = "Chess Puzzle" onclick="window.location.href = 'https://wlu10.github.io/Puzzlemania/chessPuzzle';">
+<input type="button" class = "button button3" Value = "4-Pics-1-Word" onclick="window.location.href = 'https://wlu10.github.io/Puzzlemania/4pic1word';">
 </html>
