@@ -43,7 +43,6 @@ var word
 
 function restart()
 {
-	
 	document.getElementById("easy").style.display = "initial"
 	document.getElementById("medium").style.display = "initial"
 	document.getElementById("hard").style.display = "initial"
@@ -68,7 +67,7 @@ function checkAnswer()
 	}
 }
 
-function easyWordScramble()
+function easyFourPic()
 {
 	var rand = Math.floor(Math.random() * picsEasy.length)
 	word = picsEasy[rand]
@@ -82,7 +81,7 @@ function easyWordScramble()
 	document.getElementById("answerButton").style.display = "visible"
 }
 
-function mediumWordScramble()
+function mediumFourPic()
 {
 	var rand = Math.round(Math.random() * picsMedium.length)
 	word = picsMedium[rand]
@@ -96,7 +95,7 @@ function mediumWordScramble()
 	document.getElementById("answerButton").style.display = "visible"
 }
 
-function hardWordScramble()
+function hardFourPic()
 {
 	var rand = Math.round(Math.random() * picsHard.length)
 	word = picsHard[rand]
