@@ -37,6 +37,7 @@ var moveNumber = 0
 
 function reset()
 {
+    document.getElementById("move").style.display = "initial"
     locations = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
     locations2 = ['1', '2', '3', '4', '5', '6', '7', '8']
     for (i = 0; i < 8; i++)
