@@ -63,6 +63,7 @@ function runEasy()
     elementID = ""
     piece = ""
     temp = ""
+    document.getElementById("movesRemaining").innerHTML = "You have " + String(gameAnswer.length - moveNumber) + " move(s) remaining"
     for (i = 0; i < game.length; i++)
     {
         temp = game[i].split(".")
@@ -83,6 +84,7 @@ function runMedium()
     elementID = ""
     piece = ""
     temp = ""
+    document.getElementById("movesRemaining").innerHTML = "You have " + String(gameAnswer.length - moveNumber) + " move(s) remaining"
     for (i = 0; i < game.length; i++)
     {
         temp = game[i].split(".")
@@ -103,6 +105,7 @@ function runHard()
     elementID = ""
     piece = ""
     temp = ""
+    document.getElementById("movesRemaining").innerHTML = "You have " + String(gameAnswer.length - moveNumber) + " move(s) remaining"
     for (i = 0; i < game.length; i++)
     {
         temp = game[i].split(".")
@@ -125,6 +128,7 @@ function moveTurn()
             doCompMove(gameComp[moveNumber])
         }
         moveNumber = moveNumber + 1
+        document.getElementById("movesRemaining").innerHTML = "You have " + String(gameAnswer.length - moveNumber) + " move(s) remaining"
     }
     else
     {
