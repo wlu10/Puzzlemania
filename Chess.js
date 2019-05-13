@@ -49,6 +49,11 @@ function reset()
     }
 }
 
+function howTo()
+{
+    document.getElementById("how To").innerHTML = "The rules of the game are as follows. You are white, and have a specific number of moves to win the game. You have three chances to do the wrong move. After three wrong moves, you lose and must try a different game. Each game is winnable within the specified number of moves. To move, hit the move button and enter your move in the format of the starting position of the pice you wish to move followed immediately be the ending position of that piece, for example, if you want to move a piece from a1 to c3, you would enter a1c3. That is all, enjoy the game."
+}
+
 function runEasy()
 {
     rand = Math.floor(Math.random() * easyPieceLocations.length)
@@ -58,6 +63,7 @@ function runEasy()
     elementID = ""
     piece = ""
     temp = ""
+    document.getElementById("movesRemaining").innerHTML = "You have " + String(gameAnswer.length - moveNumber) + " move(s) remaining"
     for (i = 0; i < game.length; i++)
     {
         temp = game[i].split(".")
@@ -78,6 +84,7 @@ function runMedium()
     elementID = ""
     piece = ""
     temp = ""
+    document.getElementById("movesRemaining").innerHTML = "You have " + String(gameAnswer.length - moveNumber) + " move(s) remaining"
     for (i = 0; i < game.length; i++)
     {
         temp = game[i].split(".")
@@ -98,6 +105,7 @@ function runHard()
     elementID = ""
     piece = ""
     temp = ""
+    document.getElementById("movesRemaining").innerHTML = "You have " + String(gameAnswer.length - moveNumber) + " move(s) remaining"
     for (i = 0; i < game.length; i++)
     {
         temp = game[i].split(".")
@@ -120,6 +128,7 @@ function moveTurn()
             doCompMove(gameComp[moveNumber])
         }
         moveNumber = moveNumber + 1
+        document.getElementById("movesRemaining").innerHTML = "You have " + String(gameAnswer.length - moveNumber) + " move(s) remaining"
     }
     else
     {
