@@ -108,3 +108,8 @@ function hardFourPic()
 	document.getElementById("hard").style.display = "none"
 	document.getElementById("answerButton").style.display = "visible"
 }
+
+function howTo()
+{
+    document.getElementById("how To").innerHTML = "First, select a difficulty to want to attempt. Based on the images that are sceen from the 4 pictures, make a consensus on what you think is the topic of those 4 picutures. Correct spelling is important"
+}
