@@ -100,7 +100,10 @@ function hardWordScramble()
 	document.getElementById("answerButton").style.display = "visible"
 }
 
-
+function howTo()
+{
+    document.getElementById("how To").innerHTML = "Click on a difficulty you would like to attempt. A random scrambled word would be given to you and you must decide what the word it is. There can be multiple solutions but one is expected. Good Luck!"
+}
 
 </script>
 <h2 id = "wordDisplay"> </h2>
@@ -120,5 +123,7 @@ function hardWordScramble()
 <!-- <div class="progress" style="height: 20px; width = 1px;">
 		<div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="5000"></div>
 	</div> -->
+<input type="button" id = "move" value="How to Play" onclick="howTo()">
+<p id = "how To"></p>
 </html>
 
