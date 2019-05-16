@@ -38,6 +38,7 @@ function restart()
 	document.getElementById("easy").style.display = "initial"
 	document.getElementById("medium").style.display = "initial"
 	document.getElementById("hard").style.display = "initial"
+	document.getElementById("answerButton").style.display = "initial"
 	document.getElementById("wordDisplay").innerHTML = ""
 	document.getElementById("wordDisplay2").innerHTML = ""
 	document.getElementById("answerButton").style.display = "initial"
@@ -54,6 +55,8 @@ function checkAnswer()
 	if (answer1 == correct)
 	{
 		document.getElementById("wordDisplay2").innerHTML = "Good Job, you anwered correctly"
+		document.getElementById("answerButton").style.display = "none"
+		
 	}
 	else
 	{		
