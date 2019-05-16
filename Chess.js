@@ -56,6 +56,7 @@ function howTo()
 
 function runEasy()
 {
+    reset()
     rand = Math.floor(Math.random() * easyPieceLocations.length)
     game = easyPieceLocations[rand]
     gameAnswer = easyAnswer[rand]
@@ -71,12 +72,13 @@ function runEasy()
         piece = temp[1]
         document.getElementById(elementID).innerHTML = piece
         
-        document.getElementById(elementID).fontSize = 9
+        document.getElementById(elementID).style.fontSize = 25
     }
 }
 
 function runMedium()
 {
+    reset()
     rand = Math.floor(Math.random() * mediumPieceLocations.length)
     game = mediumPieceLocations[rand]
     gameAnswer = mediumAnswer[rand]
@@ -92,12 +94,13 @@ function runMedium()
         piece = temp[1]
         document.getElementById(elementID).innerHTML = piece
         
-        document.getElementById(elementID).fontSize = 9
+        document.getElementById(elementID).style.fontSize = 25
     }
 }
 
 function runHard()
 {
+    reset()
     rand = Math.floor(Math.random() * hardPieceLocations.length)
     game = hardPieceLocations[rand]
     gameAnswer = hardAnswer[rand]
@@ -113,7 +116,7 @@ function runHard()
         piece = temp[1]
         document.getElementById(elementID).innerHTML = piece
         
-        document.getElementById(elementID).fontSize = 9
+        document.getElementById(elementID).style.fontSize = 25
     }
 }
 
