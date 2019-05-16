@@ -23,6 +23,34 @@
     </ul>
   </div>
 </nav>
+<style type="text/css">
+.chessboard {
+    width: 420px;
+    height: 420px;
+    margin: 20px;
+    border: 10px solid #333;
+}
+.black {
+    float: left;
+    width: 52.5px;
+    height: 52.5px;
+    background-color: #999;
+      font-size:50px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+}
+.sandybrown {
+    float: left;
+    width: 52.5px;
+    height: 52.5px;
+    background-color: #f9cda8;
+    font-size:50px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+}
+</style>
 <h1>Welcome to Chess</h1>
 <h2 id ="correct"></h2>
 <head>
@@ -33,84 +61,84 @@
 <p id = "movesRemaining"></p>
 <table>
 	<tr>
-		<td id="a8" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="b8" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="c8" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="d8" bgcolor="#999" width='52' height='52'> <font size=9> </font> </td>
-		<td id="e8" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="f8" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="g8" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="h8" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="a8" bgcolor="#f9cda8" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="b8" bgcolor="#999" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="c8" bgcolor="#f9cda8" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="d8" bgcolor="#999" width = '63' height = '63'> <font size=9> </font> </td>
+		<td id="e8" bgcolor="#f9cda8" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="f8" bgcolor="#999" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="g8" bgcolor="#f9cda8" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="h8" bgcolor="#999" width = '63' height = '63'> <font size=9>  </font> </td>
 	</tr>
 	<tr>
-		<td id="a7" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="b7" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="c7" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="d7" bgcolor="#f9cda8" width='52' height='52'> <font size=9> </font> </td>
-		<td id="e7" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="f7" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="g7" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="h7" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="a7" bgcolor="#999" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="b7" bgcolor="#f9cda8" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="c7" bgcolor="#999" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="d7" bgcolor="#f9cda8" width = '63' height = '63'> <font size=9> </font> </td>
+		<td id="e7" bgcolor="#999" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="f7" bgcolor="#f9cda8" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="g7" bgcolor="#999" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="h7" bgcolor="#f9cda8" width = '63' height = '63'> <font size=9>  </font> </td>
 	</tr>
 	<tr>
-		<td id="a6" bgcolor="#f9cda8" width='52' height='52'> </td>
-		<td id="b6" bgcolor="#999" width='52' height='52'> </td>
-		<td id="c6" bgcolor="#f9cda8" width='52' height='52'> </td>
-		<td id="d6" bgcolor="#999" width='52' height='52'> </td>
-		<td id="e6" bgcolor="#f9cda8" width='52' height='52'> </td>
-		<td id="f6" bgcolor="#999" width='52' height='52'> </td>
-		<td id="g6" bgcolor="#f9cda8" width='52' height='52'> </td>
-		<td id="h6" bgcolor="#999" width='52' height='52'> </td>
+		<td id="a6" bgcolor="#f9cda8" width = '63' height = '63'> </td>
+		<td id="b6" bgcolor="#999" width = '63' height = '63'> </td>
+		<td id="c6" bgcolor="#f9cda8" width = '63' height = '63'> </td>
+		<td id="d6" bgcolor="#999" width = '63' height = '63'> </td>
+		<td id="e6" bgcolor="#f9cda8" width = '63' height = '63'> </td>
+		<td id="f6" bgcolor="#999" width = '63' height = '63'> </td>
+		<td id="g6" bgcolor="#f9cda8" width = '63' height = '63'> </td>
+		<td id="h6" bgcolor="#999" width = '63' height = '63'> </td>
 	</tr>
 	<tr>
-		<td id="a5" bgcolor="#999" width='52' height='52'> </td>
-		<td id="b5" bgcolor="#f9cda8" width='52' height='52'> </td>
-		<td id="c5" bgcolor="#999" width='52' height='52'> </td>
-		<td id="d5" bgcolor="#f9cda8" width='52' height='52'> </td>
-		<td id="e5" bgcolor="#999" width='52' height='52'> </td>
-		<td id="f5" bgcolor="#f9cda8" width='52' height='52'> </td>
-		<td id="g5" bgcolor="#999" width='52' height='52'> </td>
-		<td id="h5" bgcolor="#f9cda8" width='52' height='52'> </td>
+		<td id="a5" bgcolor="#999" width = '63' height = '63'> </td>
+		<td id="b5" bgcolor="#f9cda8" width = '63' height = '63'> </td>
+		<td id="c5" bgcolor="#999" width = '63' height = '63'> </td>
+		<td id="d5" bgcolor="#f9cda8" width = '63' height = '63'> </td>
+		<td id="e5" bgcolor="#999" width = '63' height = '63'> </td>
+		<td id="f5" bgcolor="#f9cda8" width = '63' height = '63'> </td>
+		<td id="g5" bgcolor="#999" width = '63' height = '63'> </td>
+		<td id="h5" bgcolor="#f9cda8" width = '63' height = '63'> </td>
 	</tr>
 	<tr>
-		<td id="a4" bgcolor="#f9cda8" width='52' height='52'> </td>
-		<td id="b4" bgcolor="#999" width='52' height='52'> </td>
-		<td id="c4" bgcolor="#f9cda8" width='52' height='52'> </td>
-		<td id="d4" bgcolor="#999" width='52' height='52'> </td>
-		<td id="e4" bgcolor="#f9cda8" width='52' height='52'> </td>
-		<td id="f4" bgcolor="#999" width='52' height='52'> </td>
-		<td id="g4" bgcolor="#f9cda8" width='52' height='52'> </td>
-		<td id="h4" bgcolor="#999" width='52' height='52'> </td>
+		<td id="a4" bgcolor="#f9cda8" width = '63' height = '63'> </td>
+		<td id="b4" bgcolor="#999" width = '63' height = '63'> </td>
+		<td id="c4" bgcolor="#f9cda8" width = '63' height = '63'> </td>
+		<td id="d4" bgcolor="#999" width = '63' height = '63'> </td>
+		<td id="e4" bgcolor="#f9cda8" width = '63' height = '63'> </td>
+		<td id="f4" bgcolor="#999" width = '63' height = '63'> </td>
+		<td id="g4" bgcolor="#f9cda8" width = '63' height = '63'> </td>
+		<td id="h4" bgcolor="#999" width = '63' height = '63'> </td>
 	</tr>
 	<tr>
-		<td id="a3" bgcolor="#999" width='52' height='52'> </td>
-		<td id="b3" bgcolor="#f9cda8" width='52' height='52'> </td>
-		<td id="c3" bgcolor="#999" width='52' height='52'> </td>
-		<td id="d3" bgcolor="#f9cda8" width='52' height='52'> </td>
-		<td id="e3" bgcolor="#999" width='52' height='52'> </td>
-		<td id="f3" bgcolor="#f9cda8" width='52' height='52'> </td>
-		<td id="g3" bgcolor="#999" width='52' height='52'> </td>
-		<td id="h3" bgcolor="#f9cda8" width='52' height='52'> </td>
+		<td id="a3" bgcolor="#999" width = '63' height = '63'> </td>
+		<td id="b3" bgcolor="#f9cda8" width = '63' height = '63'> </td>
+		<td id="c3" bgcolor="#999" width = '63' height = '63'> </td>
+		<td id="d3" bgcolor="#f9cda8" width = '63' height = '63'> </td>
+		<td id="e3" bgcolor="#999" width = '63' height = '63'> </td>
+		<td id="f3" bgcolor="#f9cda8" width = '63' height = '63'> </td>
+		<td id="g3" bgcolor="#999" width = '63' height = '63'> </td>
+		<td id="h3" bgcolor="#f9cda8" width = '63' height = '63'> </td>
 	</tr>
 	<tr>
-		<td id="a2" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="b2" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="c2" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="d2" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="e2" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="f2" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="g2" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="h2" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="a2" bgcolor="#f9cda8" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="b2" bgcolor="#999" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="c2" bgcolor="#f9cda8" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="d2" bgcolor="#999" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="e2" bgcolor="#f9cda8" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="f2" bgcolor="#999" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="g2" bgcolor="#f9cda8" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="h2" bgcolor="#999" width = '63' height = '63'> <font size=9>  </font> </td>
 	</tr>
 	<tr>
-		<td id="a1" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="b1" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="c1" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="d1" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="e1" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="f1" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="g1" bgcolor="#999" width='52' height='52'> <font size=9>  </font> </td>
-		<td id="h1" bgcolor="#f9cda8" width='52' height='52'> <font size=9>  </font> </td>
+		<td id="a1" bgcolor="#999" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="b1" bgcolor="#f9cda8" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="c1" bgcolor="#999" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="d1" bgcolor="#f9cda8" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="e1" bgcolor="#999" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="f1" bgcolor="#f9cda8" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="g1" bgcolor="#999" width = '63' height = '63'> <font size=9>  </font> </td>
+		<td id="h1" bgcolor="#f9cda8" width = '63' height = '63'> <font size=9>  </font> </td>
 	</tr>
 </table>
 <div style="text-align: center;">
@@ -119,7 +147,6 @@
 <input type="button" value="Hard" onclick="runHard();">
 <input type="button" value="Reset" onclick="reset();">
 <input type="button" id = "move" value="Move" onclick="moveTurn()">
-<textarea id = "answer"></textarea>
 </div>
 <table>
 	<tr>
