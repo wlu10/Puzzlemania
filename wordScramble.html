@@ -38,10 +38,9 @@ function restart()
 	document.getElementById("easy").style.display = "initial"
 	document.getElementById("medium").style.display = "initial"
 	document.getElementById("hard").style.display = "initial"
-	document.getElementById("answerButton").style.display = "initial"
+	document.getElementById("answerButton").style.display = "none"
 	document.getElementById("wordDisplay").innerHTML = ""
 	document.getElementById("wordDisplay2").innerHTML = ""
-	document.getElementById("answerButton").style.display = "initial"
 	strike = 0
 	document.getElementById("strikes").innerHTML = "Strikes: " + strike
 
@@ -76,6 +75,7 @@ function checkAnswer()
 
 function easyWordScramble()
 {
+	document.getElementById("answerButton").style.display = "initial"
 	var rand = Math.floor(Math.random() * wordScrambleEasy.length)
 	word = wordScrambleEasy[rand].split(".")
 	document.getElementById("wordDisplay").innerHTML = "Unscramble the following word: " + 	word[1]
@@ -87,6 +87,7 @@ function easyWordScramble()
 
 function mediumWordScramble()
 {
+	document.getElementById("answerButton").style.display = "initial"
 	var rand = Math.round(Math.random() * wordScrambleMedium.length)
 	word = wordScrambleMedium[rand].split(".")
 	document.getElementById("wordDisplay").innerHTML = "Unscramble the following word: " + 	word[1]
@@ -98,6 +99,7 @@ function mediumWordScramble()
 
 function hardWordScramble()
 {
+	document.getElementById("answerButton").style.display = "initial"
 	var rand = Math.round(Math.random() * wordScrambleHard.length)
 	word = wordScrambleHard[rand].split(".")
 	document.getElementById("wordDisplay").innerHTML = "Unscramble the following word: " + 	word[1]
