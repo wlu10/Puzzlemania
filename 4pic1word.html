@@ -20,9 +20,10 @@
       <li class="nav-item">
         <a class="nav-link"style="color:#21ffa8"href="https://wlu10.github.io/Puzzlemania/4pic1word.html">4-Pics-1-Word (Current)</a>
       </li>
-    </ul>
+	</ul>
   </div>
 </nav>
+
 <div style="text-align: center;"><h1> Welcome to 4-Pics-1-Word </h1></div>
 <center>
 	Select your desired difficulty. Press the "Click to answer" button to submit an answer. If you get the answer wrong, a message will display at the top and you will receive one strike.
@@ -43,7 +44,7 @@
 <style>
 	body
 		{
-			background-color: rgba(228, 63, 63, 0.918);
+			background-color: rgba(189, 28, 175, 0.918);
 		}
 </style>
 <!-- <script>
@@ -175,12 +176,20 @@ function hardWordScramble()
 </div>
 
 <div style="text-align: center;">
-<input type="button" id = "easy" value="Easy" onclick="easyFourPic();">
-<input type="button" id = "medium" value="Medium" onclick="mediumFourPic();">
-<input type="button" id = "hard" value="Hard" onclick="hardFourPic();">
-<input type="button" id = "answerButton" value="Click to answer" onclick="checkAnswer();">
-<input type="button" id = "restart" value="Click to play another" onclick="restart();">
+<input type="button" class = "btn btn-success" id = "easy" value="Easy" onclick="easyFourPic();">
+<input type="button" class = "btn btn-info" id = "medium" value="Medium" onclick="mediumFourPic();">
+<input type="button" class = "btn btn-danger" id = "hard" value="Hard" onclick="hardFourPic();">
+<input type="button" class = "btn btn-success disabled" id = "answerButton" value="Click to answer" onclick="checkAnswer();">
+<input type="button" class = "btn btn-primary" id = "restart" value="Click to play another" onclick="restart();">
 </div>
 <input type="button" id = "move" value="How to Play" onclick="howTo()">
 <p id = "how To"></p>
+
+
+
+
+
+
+
+
 </html>
