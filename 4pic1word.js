@@ -47,6 +47,10 @@ function restart()
 	document.getElementById("medium").style.display = "initial"
 	document.getElementById("hard").style.display = "initial"
 	document.getElementById("answerButton").style.display = "initial"
+	document.getElementById("Pic1").src = "http://www.allwhitebackground.com/images/2/2270-190x190.jpg"
+	document.getElementById("Pic2").src = "http://www.allwhitebackground.com/images/2/2270-190x190.jpg"
+	document.getElementById("Pic3").src = "http://www.allwhitebackground.com/images/2/2270-190x190.jpg"
+	document.getElementById("Pic4").src = "http://www.allwhitebackground.com/images/2/2270-190x190.jpg"
 	document.getElementById("wordDisplay").innerHTML = ""
 	document.getElementById("wordDisplay2").innerHTML = ""
 	strike = 0
