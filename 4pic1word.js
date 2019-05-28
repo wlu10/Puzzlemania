@@ -129,5 +129,5 @@ function hardFourPic()
 
 function howTo()
 {
-    document.getElementById("how To").innerHTML = "First, select a difficulty to want to attempt. Based on the images that are sceen from the 4 pictures, make a consensus on what you think is the topic of those 4 picutures. Correct spelling is important"
+    document.getElementById("how To").innerHTML = "Click on a difficulty you would like to attempt. Based on the images that are sceen from the 4 pictures, make a consensus on what you think is the topic of those 4 picutures. Correct spelling is important and you only have three attempts. Good luck!"
 }
