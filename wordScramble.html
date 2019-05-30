@@ -52,6 +52,12 @@ function restart()
 
 }
 
+function hint()
+{
+	letter = word[0].substring(0,1)
+	document.getElementById("hints").innerHTML = letter  + " is the first letter"
+}
+
 function checkAnswer()
 {
 	var answer = prompt("Enter your answer")
@@ -126,13 +132,16 @@ function howTo()
 <h4 id = "wordDisplay3"> </h4>
 <h5 id = "wordDisplay4"> </h5>
 <h6 id = "strikes"> </h6>
+<h7 id = "hints"></h7>
 <div style="text-align: center;">
 <input type="button" class = "btn btn-success" id = "easy" value="Easy" onclick="easyWordScramble();">
 <input type="button" class = "btn btn-info" id = "medium" value="Medium" onclick="mediumWordScramble();">
 <input type="button" class = "btn btn-danger" id = "hard" value="Hard" onclick="hardWordScramble();">
 <input type="button" class = "btn btn-success disabled" id = "answerButton" value="Click to answer" onclick="checkAnswer();">
 <input type="button" class = "btn btn-primary" id = "restart" value="Click to play another" onclick="restart();">
+<input type="button" class = "btn btn-secondary" id = "hint" value="Hint" onclick="hint()">
 <input type="button" class = "btn btn-secondary" id = "move" value="How to Play" onclick="howTo()">
+
 <p id = "how To"></p>
 </div>
 <!--<p>

@@ -87,6 +87,7 @@ function easyFourPic()
 	var rand = Math.floor(Math.random() * picsEasy.length)
 	word = picsEasy[rand]
 	strike = 0
+	document.getElementById("wordDisplay3").innerHTML = word.length.toString() + " characters"
 	document.getElementById("Pic1").src = word[0]
 	document.getElementById("Pic2").src = word[1]
 	document.getElementById("Pic3").src = word[2]
@@ -102,6 +103,7 @@ function mediumFourPic()
 	var rand = Math.round(Math.random() * picsMedium.length)
 	word = picsMedium[rand]
 	strike = 0
+	document.getElementById("wordDisplay3").innerHTML = word.length.toString() + " characters"
 	document.getElementById("Pic1").src = word[0]
 	document.getElementById("Pic2").src = word[1]
 	document.getElementById("Pic3").src = word[2]
@@ -117,6 +119,7 @@ function hardFourPic()
 	var rand = Math.round(Math.random() * picsHard.length)
 	word = picsHard[rand]
 	strike = 0
+	document.getElementById("wordDisplay3").innerHTML = word.length.toString() + " characters"
 	document.getElementById("Pic1").src = word[0]
 	document.getElementById("Pic2").src = word[1]
 	document.getElementById("Pic3").src = word[2]
