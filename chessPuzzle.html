@@ -150,11 +150,13 @@
 	</tr>
 </table>
 <div style="text-align: center;">
-<input type="button" value="Easy" onclick="runEasy();">
-<input type="button" value="Medium" onclick="runMedium();">
-<input type="button" value="Hard" onclick="runHard();">
-<input type="button" value="Reset" onclick="reset();">
-<input type="button" id = "move" value="Move" onclick="moveTurn()">
+<input type="button" class = "btn btn-success" value="Easy" onclick="runEasy();">
+<input type="button" class = "btn btn-info" value="Medium" onclick="runMedium();">
+<input type="button" class = "btn btn-danger" value="Hard" onclick="runHard();">
+<input type="button" class = "btn btn-success disabled" value="Reset" onclick="reset();">
+<input type="button" class = "btn btn-primary" id = "move" value="Move" onclick="moveTurn()">
+<input type="button" class = "btn btn-secondary" id = "move" value="How to Play" onclick="howTo()">
+<p id = "how To"></p>
 </div>
 <table>
 	<tr>
@@ -164,6 +166,4 @@
 	</tr>	
 </table>
 </center>
-<input type="button" id = "move" value="How to Play" onclick="howTo()">
-<p id = "how To"></p>
 </html> 
