@@ -48,10 +48,12 @@ function restart()
 	document.getElementById("medium").style.display = "initial"
 	document.getElementById("hard").style.display = "initial"
 	document.getElementById("answerButton").style.display = "none"
+	document.getElementById("restart").style.display = "none"
 	document.getElementById("wordDisplay").innerHTML = ""
 	document.getElementById("wordDisplay2").innerHTML = ""
 	strike = 0
 	document.getElementById("strikes").innerHTML = "Strikes: " + strike
+	document.getElementById("hints").innerHTML = ""
 
 }
 
@@ -91,60 +93,60 @@ function checkAnswer()
 function easyWordScramble()
 {
 	document.getElementById("answerButton").style.display = "initial"
+	document.getElementById("restart").style.display = "initial"
 	var rand = Math.floor(Math.random() * wordScrambleEasy.length)
 	word = wordScrambleEasy[rand].split(".")
 	document.getElementById("wordDisplay").innerHTML = "Unscramble the following word: " + 	word[1]
 	document.getElementById("easy").style.display = "none"
 	document.getElementById("medium").style.display = "none"
 	document.getElementById("hard").style.display = "none"
-	document.getElementById("answerButton").style.display = "visible"
+	document.getElementById("answerButton").style.visibility = "visible"
 }
 
 function mediumWordScramble()
 {
 	document.getElementById("answerButton").style.display = "initial"
+	document.getElementById("restart").style.display = "initial"
 	var rand = Math.round(Math.random() * wordScrambleMedium.length)
 	word = wordScrambleMedium[rand].split(".")
 	document.getElementById("wordDisplay").innerHTML = "Unscramble the following word: " + 	word[1]
 	document.getElementById("easy").style.display = "none"
 	document.getElementById("medium").style.display = "none"
 	document.getElementById("hard").style.display = "none"
-	document.getElementById("answerButton").style.display = "visible"
+	document.getElementById("answerButton").style.visibility = "visible"
 }
 
 function hardWordScramble()
 {
 	document.getElementById("answerButton").style.display = "initial"
+	document.getElementById("restart").style.display = "initial"
 	var rand = Math.round(Math.random() * wordScrambleHard.length)
 	word = wordScrambleHard[rand].split(".")
 	document.getElementById("wordDisplay").innerHTML = "Unscramble the following word: " + 	word[1]
 	document.getElementById("easy").style.display = "none"
 	document.getElementById("medium").style.display = "none"
 	document.getElementById("hard").style.display = "none"
-	document.getElementById("answerButton").style.display = "visible"
+	document.getElementById("answerButton").style.visibility = "visible"
 }
 
-function howTo()
-{
-    document.getElementById("how To").innerHTML = "Click on a difficulty you would like to attempt. A random scrambled word would be given to you and you must decide what the unscrambled word would spell out. There can be multiple solutions but one is expected and you only have three attempts. Good Luck!"
-}
 
 </script>
 <h2 id = "wordDisplay"> </h2>
 <h3 id = "wordDisplay2"> </h3>
 <h4 id = "wordDisplay3"> </h4>
 <h5 id = "wordDisplay4"> </h5>
-<h6 id = "strikes"> </h6>
+<h6 id = "strikes"> Strikes: 0 </h6>
 <h7 id = "hints"></h7>
+
+<p>
 <div style="text-align: center;">
 <input type="button" class = "btn btn-success" id = "easy" value="Easy" onclick="easyWordScramble();">
 <input type="button" class = "btn btn-info" id = "medium" value="Medium" onclick="mediumWordScramble();">
 <input type="button" class = "btn btn-danger" id = "hard" value="Hard" onclick="hardWordScramble();">
-<input type="button" class = "btn btn-success disabled" id = "answerButton" value="Click to answer" onclick="checkAnswer();">
-<input type="button" class = "btn btn-primary" id = "restart" value="Click to play another" onclick="restart();">
+<input type="button" class = "btn btn-success disabled" id = "answerButton" value="Click to answer" onclick="checkAnswer();" style = "display: none">
+<input type="button" class = "btn btn-primary" id = "restart" value="Click to play another" onclick="restart();" style = "display: none">
 <input type="button" class = "btn btn-secondary" id = "hint" value="Hint" onclick="hint()">
-<input type="button" class = "btn btn-secondary" id = "move" value="How to Play" onclick="howTo()">
-
+</p>
 <p id = "how To"></p>
 </div>
 <!--<p>
@@ -152,23 +154,23 @@ function howTo()
 		<div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="5000"></div>
 	</div>
 </p>-->
-<input type="button" id = "move" value="How to Play" onclick="howTo()">
 <p id = "how To"></p>
 
-
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+<center>
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Instructions</button>
+</center>
 
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-				<h4 class="modal-title">Modal Header</h4>
+				<h4 class="modal-title">How to Play</h4>
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
         
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
+        <p>Click on a difficulty you would like to attempt. A random scrambled word would be given to you and you must decide what the unscrambled word would spell out. There can be multiple solutions but one is expected and you only have three attempts. Good Luck!</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

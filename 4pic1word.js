@@ -46,13 +46,15 @@ function restart()
 	document.getElementById("easy").style.display = "initial"
 	document.getElementById("medium").style.display = "initial"
 	document.getElementById("hard").style.display = "initial"
-	document.getElementById("answerButton").style.display = "initial"
+	document.getElementById("answerButton").style.display = "none"
+	document.getElementById("restart").style.display = "none"
 	document.getElementById("Pic1").src = "http://www.allwhitebackground.com/images/2/2270-190x190.jpg"
 	document.getElementById("Pic2").src = "http://www.allwhitebackground.com/images/2/2270-190x190.jpg"
 	document.getElementById("Pic3").src = "http://www.allwhitebackground.com/images/2/2270-190x190.jpg"
 	document.getElementById("Pic4").src = "http://www.allwhitebackground.com/images/2/2270-190x190.jpg"
 	document.getElementById("wordDisplay").innerHTML = ""
 	document.getElementById("wordDisplay2").innerHTML = ""
+	document.getElementById("wordDisplay3").innerHTML = ""
 	strike = 0
 }
 
@@ -87,7 +89,7 @@ function easyFourPic()
 	var rand = Math.floor(Math.random() * picsEasy.length)
 	word = picsEasy[rand]
 	strike = 0
-	document.getElementById("wordDisplay3").innerHTML = word.length.toString() + " characters"
+	document.getElementById("wordDisplay3").innerHTML = word[4].length.toString() + " characters (including spaces, if applicable)"
 	document.getElementById("Pic1").src = word[0]
 	document.getElementById("Pic2").src = word[1]
 	document.getElementById("Pic3").src = word[2]
@@ -95,7 +97,9 @@ function easyFourPic()
 	document.getElementById("easy").style.display = "none"
 	document.getElementById("medium").style.display = "none"
 	document.getElementById("hard").style.display = "none"
-	document.getElementById("answerButton").style.display = "visible"
+	document.getElementById("answerButton").style.display = "initial"
+	document.getElementById("restart").style.display = "initial"
+	document.getElementById("answerButton").style.visibility = "visible"
 }
 
 function mediumFourPic()
@@ -103,7 +107,7 @@ function mediumFourPic()
 	var rand = Math.round(Math.random() * picsMedium.length)
 	word = picsMedium[rand]
 	strike = 0
-	document.getElementById("wordDisplay3").innerHTML = word.length.toString() + " characters"
+	document.getElementById("wordDisplay3").innerHTML = word[4].length.toString() + " characters (including spaces, if applicable)"
 	document.getElementById("Pic1").src = word[0]
 	document.getElementById("Pic2").src = word[1]
 	document.getElementById("Pic3").src = word[2]
@@ -111,15 +115,18 @@ function mediumFourPic()
 	document.getElementById("easy").style.display = "none"
 	document.getElementById("medium").style.display = "none"
 	document.getElementById("hard").style.display = "none"
+	document.getElementById("answerButton").style.display = "initial"
+	document.getElementById("restart").style.display = "initial"
 	document.getElementById("answerButton").style.display = "visible"
 }
+
 
 function hardFourPic()
 {
 	var rand = Math.round(Math.random() * picsHard.length)
 	word = picsHard[rand]
 	strike = 0
-	document.getElementById("wordDisplay3").innerHTML = word.length.toString() + " characters"
+	document.getElementById("wordDisplay3").innerHTML = word[4].length.toString() + " characters (including spaces, if applicable)"
 	document.getElementById("Pic1").src = word[0]
 	document.getElementById("Pic2").src = word[1]
 	document.getElementById("Pic3").src = word[2]
@@ -127,8 +134,13 @@ function hardFourPic()
 	document.getElementById("easy").style.display = "none"
 	document.getElementById("medium").style.display = "none"
 	document.getElementById("hard").style.display = "none"
-	document.getElementById("answerButton").style.display = "visible"
+	document.getElementById("answerButton").style.display = "initial"
+	document.getElementById("restart").style.display = "initial"
+	document.getElementById("answerButton").style.visibility = "visible"
+
 }
+
+
 
 function howTo()
 {
