@@ -23,6 +23,9 @@
 	</ul>
   </div>
 </nav>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <div style="text-align: center;"><h1> Welcome to 4-Pics-1-Word </h1></div>
 <head>
@@ -177,6 +180,29 @@ function hardWordScramble()
 <input type="button" class = "btn btn-danger" id = "hard" value="Hard" onclick="hardFourPic();">
 <input type="button" class = "btn btn-info" id = "answerButton" value="Click to answer" onclick="checkAnswer();" style = "display: none">
 <input type="button" class = "btn btn-primary" id = "restart" value="Click to play another" onclick="restart();" style = "display: none">
-<input type="button" class = "btn btn-secondary" id = "move" value="How to Play" onclick="howTo()">
-<p id = "how To"></p>
+
+<center>
+	<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Instructions</button>
+</center>
+	
+	<div id="myModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+		  <div class="modal-header">
+					<h4 class="modal-title">How to Play</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+			
+		  </div>
+		  <div class="modal-body">
+			<p>Click on a difficulty you would like to attempt. Based on the images that are sceen from the 4 pictures, make a consensus on what you think is the topic of those 4 picutures. Correct spelling is important and you only have three attempts. Good luck!</p>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+
 </html>
