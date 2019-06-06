@@ -159,8 +159,8 @@
 <input type="button" class = "btn btn-success" value="Easy" onclick="runEasy();">
 <input type="button" class = "btn btn-info" value="Medium" onclick="runMedium();">
 <input type="button" class = "btn btn-danger" value="Hard" onclick="runHard();">
-<input type="button" class = "btn btn-success disabled" value="Reset" onclick="reset();">
-<input type="button" class = "btn btn-primary" id = "move" value="Move" onclick="moveTurn()">
+<input type="button" class = "btn btn-success disabled" value="Reset" id = "Reset" onclick="reset();" style="display: none">
+<input type="button" class = "btn btn-primary" id = "move" value="Move" onclick="moveTurn()" style="display: none">
 
 </div>
 <center>
@@ -177,7 +177,7 @@
 			
 		  </div>
 		  <div class="modal-body">
-			<p>The rules of the game are as follows. You are white, and have a specific number of moves to win the game. Each game is winnable within the specified number of moves. To move, hit the move button and enter your move in the format of the starting position of the pice you wish to move followed immediately be the ending position of that piece, for example, if you want to move a piece from a1 to c3, you would enter a1c3. That is all, enjoy the game.</p>
+			<p>The rules of the game are as follows. You are the white pieces, and have a specific number of moves to win the game. Each game is winnable within the specified number of moves. To move, hit the move button and enter your move in the format of the starting position of the pice you wish to move followed immediately be the ending position of that piece, for example, if you want to move a piece from a1 to c3, you would enter a1c3. That is all, enjoy the game.</p>
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

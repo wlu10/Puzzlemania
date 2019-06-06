@@ -49,6 +49,7 @@ function restart()
 	document.getElementById("hard").style.display = "initial"
 	document.getElementById("answerButton").style.display = "none"
 	document.getElementById("restart").style.display = "none"
+	document.getElementById("hint").style.display = "none"
 	document.getElementById("wordDisplay").innerHTML = ""
 	document.getElementById("wordDisplay2").innerHTML = ""
 	strike = 0
@@ -94,6 +95,7 @@ function easyWordScramble()
 {
 	document.getElementById("answerButton").style.display = "initial"
 	document.getElementById("restart").style.display = "initial"
+	document.getElementById("hint").style.display = "initial"
 	var rand = Math.floor(Math.random() * wordScrambleEasy.length)
 	word = wordScrambleEasy[rand].split(".")
 	document.getElementById("wordDisplay").innerHTML = "Unscramble the following word: " + 	word[1]
@@ -107,6 +109,7 @@ function mediumWordScramble()
 {
 	document.getElementById("answerButton").style.display = "initial"
 	document.getElementById("restart").style.display = "initial"
+	document.getElementById("hint").style.display = "initial"
 	var rand = Math.round(Math.random() * wordScrambleMedium.length)
 	word = wordScrambleMedium[rand].split(".")
 	document.getElementById("wordDisplay").innerHTML = "Unscramble the following word: " + 	word[1]
@@ -120,6 +123,7 @@ function hardWordScramble()
 {
 	document.getElementById("answerButton").style.display = "initial"
 	document.getElementById("restart").style.display = "initial"
+	document.getElementById("hint").style.display = "initial"
 	var rand = Math.round(Math.random() * wordScrambleHard.length)
 	word = wordScrambleHard[rand].split(".")
 	document.getElementById("wordDisplay").innerHTML = "Unscramble the following word: " + 	word[1]
@@ -145,7 +149,7 @@ function hardWordScramble()
 <input type="button" class = "btn btn-danger" id = "hard" value="Hard" onclick="hardWordScramble();">
 <input type="button" class = "btn btn-success disabled" id = "answerButton" value="Click to answer" onclick="checkAnswer();" style = "display: none">
 <input type="button" class = "btn btn-primary" id = "restart" value="Click to play another" onclick="restart();" style = "display: none">
-<input type="button" class = "btn btn-secondary" id = "hint" value="Hint" onclick="hint()">
+<input type="button" class = "btn btn-secondary" id = "hint" value="Hint" onclick="hint()" style = "display: none">
 </p>
 <p id = "how To"></p>
 </div>

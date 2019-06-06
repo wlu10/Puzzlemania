@@ -37,6 +37,8 @@ var moveNumber = 0
 
 function reset()
 {
+    document.getElementById("Reset").style.display = "none"
+	document.getElementById("move").style.display = "none"
     locations = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
     locations2 = ['1', '2', '3', '4', '5', '6', '7', '8']
     for (i = 0; i < 8; i++)
@@ -53,6 +55,8 @@ function reset()
 function runEasy()
 {
     reset()
+    document.getElementById("Reset").style.display = "initial"
+	document.getElementById("move").style.display = "initial"
     rand = Math.floor(Math.random() * easyPieceLocations.length)
     game = easyPieceLocations[rand]
     gameAnswer = easyAnswer[rand]
@@ -75,6 +79,8 @@ function runEasy()
 function runMedium()
 {
     reset()
+    document.getElementById("Reset").style.display = "initial"
+	document.getElementById("move").style.display = "initial"
     rand = Math.floor(Math.random() * mediumPieceLocations.length)
     game = mediumPieceLocations[rand]
     gameAnswer = mediumAnswer[rand]
@@ -97,6 +103,8 @@ function runMedium()
 function runHard()
 {
     reset()
+    document.getElementById("Reset").style.display = "initial"
+	document.getElementById("move").style.display = "initial"
     rand = Math.floor(Math.random() * hardPieceLocations.length)
     game = hardPieceLocations[rand]
     gameAnswer = hardAnswer[rand]
