@@ -62,6 +62,7 @@ function hint()
 {
 	letter = word[0].substring(0,1)
 	document.getElementById("hints").innerHTML = letter  + " is the first letter"
+	document.getElementById("hints").style.fontSize = "x-large"
 }
 
 function checkAnswer()
@@ -139,7 +140,7 @@ function hardWordScramble()
 <h3 id = "wordDisplay2"> </h3>
 <h4 id = "wordDisplay3"> </h4>
 <h5 id = "wordDisplay4"> </h5>
-<h6 id = "strikes"> Strikes: 0 </h6>
+<h6 id = "strikes" style = "font-size: x-large" > Strikes: 0 </h6>
 <h7 id = "hints"></h7>
 
 <p>
